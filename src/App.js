@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Instagram from './components/containers/Instagram'
-import SearchInput from './components/containers/SearchInput'
-import { connect } from 'react-redux';
+import PostsContainer from './components/containers/PostsContainer'
 
 
 class App extends Component {
@@ -11,14 +10,16 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <SearchInput />
+          <Instagram />
         </header>
+        <PostsContainer />
 
-        <Instagram />
       </div>
     );
   }
 }
+
+
 
 export default App;
 

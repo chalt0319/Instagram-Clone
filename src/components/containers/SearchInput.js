@@ -12,8 +12,9 @@ export default class SearchInput extends Component {
     })
   }
 
-  handleSubmit = () => {
-    
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.props.searchBar(this.state.text)
   }
 
   render() {

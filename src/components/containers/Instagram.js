@@ -1,24 +1,34 @@
 import React, { Component } from 'react';
+import SearchInput from './SearchInput'
+import { connect } from 'react-redux';
 
-export default class Instagram extends Component {
+class Instagram extends Component {
 
   state = {
     searchText: ""
   }
 
-  // searchBar = (word) => {
-  //   'https://api.instagram.com/v1/tags/search?q=' + word + '&access_token=' + ACCESSTOKEN'
-  //
-  //   fetch('http://api.giphy.com/v1/gifs/search?q=' + word + '&api_key=dc6zaTOxFJmzC&rating=g')
-  //     .then(response => response.json())
-  //     .then(data => {this.setState({searchText: data})})
-  // }
+  arrayIfy = (object) => {
+    console.log(object)
+    return object['data']
+  }
+
+  searchBar = (word) => {
+    fetch('http://api.giphy.com/v1/gifs/search?q=' + word + '&api_key=dc6zaTOxFJmzC&rating=g')
+      .then(response => response.json())
+      .then(data => {this.props.dispatch({type: 'ADD_POST', post: this.arrayIfy(data)})})
+  }
 
   render() {
 
     return (
-      <div >
+      <div>
+      <SearchInput searchBar={this.searchBar}/>
       </div>
     );
   }
 }
+
+
+
+export default connect()(Instagram)
