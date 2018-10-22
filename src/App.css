@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -33,12 +33,15 @@
 }
 
 .search-form {
-  display: inline-block;
+  position: relative;
+  left: 43%;
+  margin: 0 auto;
 }
 
 .post-image {
   max-width: 300px;
-  border-radius: 10px;
+  min-width: 300px;
+  /* border-radius: 10px; */
 }
 
 .heart {
@@ -54,9 +57,17 @@
 .image-box {
   background: white;
   margin: 10px auto;
-  width: 30%;
-  border: 2px solid white;
+  width: 300px;
+  border: 0px solid white;
   border-radius: 10px;
   display: block;
-  padding: 10px;
+  padding: 20px 0 20px;
+}
+
+.title {
+  font-style: italic;
+  position: relative;
+  top: 0;
+  left: 10px;
+  padding-bottom: 5px;
 }
