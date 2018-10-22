@@ -33,16 +33,30 @@
 }
 
 .search-form {
-  margin-left: 15px;
   display: inline-block;
 }
 
-img {
+.post-image {
   max-width: 300px;
+  border-radius: 10px;
+}
+
+.heart {
+  max-width: 20px;
 }
 
 .image-feed {
   background: grey;
-  margin-left: 350px;
-  margin-right: 350px;
+  padding: 10px;
+  margin: auto;
+}
+
+.image-box {
+  background: white;
+  margin: 10px auto;
+  width: 30%;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: block;
+  padding: 10px;
 }
