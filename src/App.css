@@ -36,3 +36,13 @@
   margin-left: 15px;
   display: inline-block;
 }
+
+img {
+  max-width: 300px;
+}
+
+.image-feed {
+  background: grey;
+  margin-left: 350px;
+  margin-right: 350px;
+}

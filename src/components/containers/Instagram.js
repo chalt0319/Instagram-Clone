@@ -8,15 +8,15 @@ class Instagram extends Component {
     searchText: ""
   }
 
-  arrayIfy = (object) => {
-    console.log(object)
-    return object['data']
-  }
+  // arrayIfy = (object) => {
+  //   console.log(object['data'])
+  //   return object['data']
+  // }
 
   searchBar = (word) => {
     fetch('http://api.giphy.com/v1/gifs/search?q=' + word + '&api_key=dc6zaTOxFJmzC&rating=g')
       .then(response => response.json())
-      .then(data => {this.props.dispatch({type: 'ADD_POST', post: this.arrayIfy(data)})})
+      .then(data => {this.props.dispatch({type: 'ADD_POST', posts: data['data']})})
   }
 
   render() {

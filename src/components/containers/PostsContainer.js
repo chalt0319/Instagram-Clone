@@ -6,7 +6,7 @@ class PostsContainer extends Component {
   render() {
 
     return (
-      <Posts addPost={this.props.addPost}/>
+      <Posts posts={this.props.posts}/>
     );
   }
 }
@@ -23,4 +23,4 @@ const mapStateToProps = state => {
 //     };
 // };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostsContainer)
+export default connect(mapStateToProps)(PostsContainer)

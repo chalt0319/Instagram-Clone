@@ -10,7 +10,8 @@ export default function postReducer(state = {posts: []}, action) {
       //   id: cuid(),
       //   text: action.rest.text
       // }
-      return {posts: [action.posts]}
+      console.log(action.posts)
+      return {posts: action.posts}
 
     default:
       return state
