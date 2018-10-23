@@ -11,7 +11,11 @@ export default function postReducer(state = {posts: [], likes: [], comments: [],
 
     case 'LIKE_POST':
 
-      return {...state, likes: state.likes.concat(action.post)}
+      if (!state.likes.includes(action.post)) {
+        return {...state, likes: state.likes.concat(action.post)}
+      } else {
+        return {...state}
+      }
 
     case 'ADD_COMMENT':
 
@@ -21,9 +25,32 @@ export default function postReducer(state = {posts: [], likes: [], comments: [],
         postId: action.post.id
       }
 
-      console.log(comment)
+      if (!state.postComments.includes(action.post)) {
+        return {...state, comments: [...state.comments, comment], postComments: [...state.postComments, action.post]}
+      } else {
+        return {...state, comments: [...state.comments, comment]}
+      }
 
-      return {...state, comments: [...state.comments, comment], postComments: [...state.postComments, action.post]}
+    case 'DELETE_COMMENT':
+
+      const deletedComments = state.comments.filter(function (comment) {
+        return comment.id !== action.comment.id
+      })
+
+      const filteredComments = state.comments.filter(function (comment) {
+        return comment.postId === action.post.id
+      })
+
+        if (filteredComments.length > 1) {
+          console.log("length greater than 1")
+          return {...state, comments: deletedComments}
+        } else {
+          const filteredPosts = state.postComments.filter(function (post) {
+            return post.id !== action.post.id
+          })
+          console.log(filteredPosts)
+          return {...state, comments: deletedComments, postComments: filteredPosts}
+        }
 
 
     default:

@@ -6,7 +6,10 @@ class PostsContainer extends Component {
   render() {
 
     return (
-      <Posts posts={this.props.posts}/>
+      <div>
+        <h2 id='posts-header'>All Posts:</h2>
+        <Posts posts={this.props.posts}/>
+      </div>
     );
   }
 }

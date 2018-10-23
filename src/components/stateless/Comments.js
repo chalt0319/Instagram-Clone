@@ -12,8 +12,11 @@ export default class Comments extends Component {
   render() {
 
     return (
-      <div className="image-feed">
-        {this.showPosts()}
+      <div>
+        <h2 id='commented-header'>Commented Posts:</h2>
+        <div className="image-feed">
+          {this.showPosts()}
+        </div>
       </div>
     );
   }

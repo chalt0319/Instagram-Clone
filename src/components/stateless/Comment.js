@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CommentForm from '../containers/CommentForm'
+import Delete from './Delete'
 import { connect } from 'react-redux';
 
 
@@ -11,7 +12,7 @@ class Comment extends Component {
         return comment.postId === post.id
       })
       return comments.map(function (comment) {
-        return <li key={comment.id} className='comment-li'>{comment.text}</li>
+        return <React.Fragment><li key={comment.id} className='comment-li'>{comment.text}</li><Delete comment={comment} post={post}/></React.Fragment>
       })
     }
   }
