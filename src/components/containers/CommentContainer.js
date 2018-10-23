@@ -11,7 +11,7 @@ class LikesContainer extends Component {
         <header className="App-header">
           <Instagram />
         </header>
-        <Comments comments={this.props.comments}/>
+        <Comments postComments={this.props.postComments} />
 
       </div>
     );
@@ -20,7 +20,7 @@ class LikesContainer extends Component {
 
 const mapStateToProps = state => {
   return {
-    comments: state.comments,
+    postComments: state.postComments
   }
 }
 

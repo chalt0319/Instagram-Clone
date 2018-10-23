@@ -2,7 +2,7 @@ import cuid from 'cuid';
 export const cuidFn = cuid;
 
 
-export default function postReducer(state = {posts: [], likes: [], comments: []}, action) {
+export default function postReducer(state = {posts: [], likes: [], comments: [], postComments: []}, action) {
   switch (action.type) {
     case 'ADD_POST':
 
@@ -23,7 +23,7 @@ export default function postReducer(state = {posts: [], likes: [], comments: []}
 
       console.log(comment)
 
-      return {...state, comments: [...state.comments, comment]}
+      return {...state, comments: [...state.comments, comment], postComments: [...state.postComments, action.post]}
 
 
     default:
