@@ -21,6 +21,8 @@ export default function postReducer(state = {posts: [], likes: [], comments: []}
         postId: action.post.id
       }
 
+      console.log(comment)
+
       return {...state, comments: [...state.comments, comment]}
 
 

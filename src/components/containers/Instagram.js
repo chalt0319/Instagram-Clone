@@ -10,7 +10,7 @@ class Instagram extends Component {
   }
 
   componentDidMount() {
-    fetch('http://api.giphy.com/v1/gifs/search?q=' + 'funny' + '&api_key=dc6zaTOxFJmzC&rating=g')
+    fetch('http://api.giphy.com/v1/gifs/search?q=funny&api_key=dc6zaTOxFJmzC&rating=g')
       .then(response => response.json())
       .then(data => {this.props.dispatch({type: 'ADD_POST', posts: data['data']})})
   }

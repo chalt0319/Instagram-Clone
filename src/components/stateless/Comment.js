@@ -5,10 +5,13 @@ import { connect } from 'react-redux';
 
 class Comment extends Component {
 
-  showComments = () => {
+  showComments = (post) => {
     if (this.props.comments !== []) {
-      return this.props.comments.map(function (comment) {
-        return <p>{comment.text}</p>
+      const comments = this.props.comments.filter(function (comment) {
+        return comment.postId === post.id
+      })
+      return comments.map(function (comment) {
+        return <li key={comment.id} className='comment-li'>{comment.text}</li>
       })
     }
   }
@@ -19,7 +22,9 @@ class Comment extends Component {
     return (
       <span className='comment-form'>
         <CommentForm post={this.props.post}/>
-        {this.showComments()}
+        <ul>
+          {this.showComments(this.props.post)}
+        </ul>
       </span>
     );
   }

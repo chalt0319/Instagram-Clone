@@ -60,6 +60,10 @@
   padding-left: 5px;
 }
 
+.comment-li {
+  font-family: Optima;
+}
+
 #heart {
   position: fixed;
   left: 5%;
@@ -111,4 +115,6 @@ body {
   top: 0;
   left: 10px;
   padding-bottom: 5px;
+  font-family: Optima;
+  font-size: 18px;
 }
