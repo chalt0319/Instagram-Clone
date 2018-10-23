@@ -21,6 +21,11 @@ class Instagram extends Component {
       .then(data => {this.props.dispatch({type: 'ADD_POST', posts: data['data']})})
   }
 
+  scrollUp = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
   render() {
 
     return (
@@ -34,8 +39,8 @@ class Instagram extends Component {
       <Link to='/comments'>
         <img id="comment" src='http://www.clker.com/cliparts/e/D/y/m/U/t/speech-bubble-hi.png' alt="Comment"/>
       </Link>
-
       <SearchInput searchBar={this.searchBar}/>
+      <img id="scroll" onClick={this.scrollUp} src='https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-up-01-512.png' alt="scroll"/>
       </div>
     );
   }

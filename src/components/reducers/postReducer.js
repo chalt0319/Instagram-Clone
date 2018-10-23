@@ -42,13 +42,11 @@ export default function postReducer(state = {posts: [], likes: [], comments: [],
       })
 
         if (filteredComments.length > 1) {
-          console.log("length greater than 1")
           return {...state, comments: deletedComments}
         } else {
           const filteredPosts = state.postComments.filter(function (post) {
             return post.id !== action.post.id
           })
-          console.log(filteredPosts)
           return {...state, comments: deletedComments, postComments: filteredPosts}
         }
 

@@ -82,6 +82,13 @@
   opacity: 0.8;
 }
 
+#scroll {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  max-width: 40px;
+}
+
 #heart {
   position: fixed;
   left: 5%;

@@ -12,7 +12,7 @@ class Comment extends Component {
         return comment.postId === post.id
       })
       return comments.map(function (comment) {
-        return <React.Fragment><li key={comment.id} className='comment-li'>{comment.text}</li><Delete comment={comment} post={post}/></React.Fragment>
+        return <React.Fragment key={comment.id} ><li className='comment-li'>{comment.text}</li><Delete comment={comment} post={post}/></React.Fragment>
       })
     }
   }
