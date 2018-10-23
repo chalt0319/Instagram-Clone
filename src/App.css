@@ -111,7 +111,23 @@
   min-height: 20px;
 }
 
+@keyframes slidein
+{
+    from {
+        left: 0;
+    }
+    to {
+        left: 100%;
+    }
+}
 
+#pikachu {
+  position: relative;
+  bottom: 3%;
+  left: 1%;
+  max-width: 90px;
+  animation: slidein 5s linear 1s infinite running;
+}
 
 #likes-header {
   color: white;
