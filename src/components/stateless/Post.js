@@ -10,7 +10,7 @@ export default class Post extends Component {
         <div className="image-box">
           <Title title={this.props.post.title}/>
           <img className="post-image" src={this.props.post.images.original.url} alt={this.props.post.slug}/><br/>
-          <Like />
+          <Like post={this.props.post}/>
         </div>
     );
   }

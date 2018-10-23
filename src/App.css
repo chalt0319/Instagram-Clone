@@ -33,8 +33,9 @@
 }
 
 .search-form {
+  display: inline;
   position: relative;
-  left: 43%;
+  left: 40%;
   margin: 0 auto;
 }
 
@@ -47,6 +48,25 @@
 .heart {
   max-width: 20px;
   padding-left: 5px;
+}
+
+#heart {
+  display: inline;
+  position: relative;
+  left: 2%;
+  max-width: 20px;
+}
+
+#home {
+  display: inline;
+  position: relative;
+  left: 1%;
+  max-width: 20px;
+}
+
+#likes-header {
+  color: white;
+  text-align: center;
 }
 
 body {

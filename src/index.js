@@ -6,14 +6,20 @@ import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import postReducer from './components/reducers/postReducer'
+import LikesContainer from './components/containers/LikesContainer'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const store = createStore(postReducer);
 
-
-ReactDOM.render(
+ReactDOM.render((
   <Provider store={store}>
-       <App />
-   </Provider>,
+    <Router>
+      <React.Fragment>
+         <Route exact path="/" component={App} />
+         <Route exact path="/likes" component={LikesContainer} />
+      </React.Fragment>
+    </Router>
+ </Provider>),
   document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

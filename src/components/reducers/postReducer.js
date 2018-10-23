@@ -1,17 +1,14 @@
 
-// import cuid from 'cuid';
-// export const cuidFn = cuid;
-
-export default function postReducer(state = {posts: []}, action) {
+export default function postReducer(state = {posts: [], likes: []}, action) {
   switch (action.type) {
     case 'ADD_POST':
 
-      // const newPost = {
-      //   id: cuid(),
-      //   text: action.rest.text
-      // }
       console.log(action.posts)
-      return {posts: action.posts}
+      return {...state, posts: action.posts}
+
+    case 'LIKE_POST':
+    console.log(state.likes)
+      return {...state, likes: state.likes.concat(action.post)}
 
     default:
       return state
