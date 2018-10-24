@@ -12,13 +12,13 @@ class UsersContainer extends Component {
   componentDidMount() {
     fetch('api/users')
       .then(response => response.json())
-      .then(data => {this.setState({users: data})})
+      .then(data => {this.setState({users: data.reverse()})})
   }
 
-  componentDidUpdate() {
+  updateUsers = () => {
     fetch('api/users')
       .then(response => response.json())
-      .then(data => {this.setState({users: data})})
+      .then(data => {this.setState({users: data.reverse()})})
   }
 
   render() {
@@ -28,7 +28,7 @@ class UsersContainer extends Component {
         <header className="App-header">
           <Instagram />
         </header>
-        <Users users={this.state.users}/>
+        <Users users={this.state.users} updateUsers={this.updateUsers}/>
       </div>
     );
   }

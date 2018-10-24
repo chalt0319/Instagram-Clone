@@ -179,6 +179,7 @@ body {
 .user-image {
   display: inline;
   max-width: 70px;
+  min-width: 70px;
   min-height: 70px;
   max-height: 70px;
   /* position: relative;
@@ -211,6 +212,6 @@ body {
   /* border: 0px solid white;
   border-radius: 10px; */
   display: block;
-  max-height: 70px;
-  min-height: 70px;
+  max-height: 30px;
+  min-height: 30px;
 }

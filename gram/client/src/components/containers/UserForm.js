@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 class UserForm extends Component {
 
@@ -28,19 +27,23 @@ class UserForm extends Component {
         headers: {'Content-Type': 'application/json'}
     })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => this.props.updateUsers())
+    this.setState({
+      name: "",
+      pic_url: ""
+    })
   }
 
   render() {
 
     return (
       <form onSubmit={this.handleSubmit} className="user-form">
-        <input onChange={this.handleUsername} type="text" value={this.state.name}  placeholder="Username"></input>
-        <input onChange={this.handleURL} type="text" value={this.state.pic_url}  placeholder="Image URL"></input>
+        <input onChange={this.handleUsername} type="text" value={this.state.name}  placeholder="Username"></input><span> </span>
+        <input onChange={this.handleURL} type="text" value={this.state.pic_url}  size="38" placeholder="Image URL"></input><span> </span>
         <input type='submit' value="Submit"></input>
       </form>
     );
   }
 }
 
-export default connect()(UserForm)
+export default UserForm

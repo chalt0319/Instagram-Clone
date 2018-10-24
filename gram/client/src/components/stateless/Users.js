@@ -15,8 +15,8 @@ export default class Posts extends Component {
     return (
       <div className="image-feed">
         <h2 id='commented-header'>All Users:</h2>
+        <UserForm updateUsers={this.props.updateUsers}/>
         {this.showUsers()}
-        <UserForm />
       </div>
     );
   }
