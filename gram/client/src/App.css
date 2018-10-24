@@ -182,8 +182,8 @@ body {
   min-width: 70px;
   min-height: 70px;
   max-height: 70px;
-  /* position: relative;
-  bottom: -5px; */
+  border: 0px solid white;
+  border-radius: 5px;
 }
 
 .username {
@@ -199,8 +199,8 @@ body {
   background: white;
   margin: 10px auto;
   width: 400px;
-  /* border: 0px solid white;
-  border-radius: 10px; */
+  border: 0px solid white;
+  border-radius: 5px;
   display: block;
   max-height: 70px;
   min-height: 70px;

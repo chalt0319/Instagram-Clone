@@ -20,10 +20,19 @@ class UserForm extends Component {
   }
 
   handleSubmit = (e) => {
+    const info = {
+      name: this.state.name,
+      pic_url: this.state.pic_url
+    }
+
+    if (this.state.pic_url === "") {
+      info.pic_url = "https://png.pngtree.com/element_origin_min_pic/16/12/25/a993726976f4619909704e1177d63658.jpg"
+    }
+
     e.preventDefault()
     fetch('api/users', {
         method: "POST",
-        body: JSON.stringify(this.state),
+        body: JSON.stringify(info),
         headers: {'Content-Type': 'application/json'}
     })
     .then(response => response.json())
