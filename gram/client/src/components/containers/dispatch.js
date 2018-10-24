@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
 
 export function dispatchFunction(word) {
-  console.log('C')
   return function (dispatch) {
     return fetch(`http://api.giphy.com/v1/gifs/search?q=${word}&api_key=dc6zaTOxFJmzC&rating=g`)
       .then(response => response.json())
       .then(data => {
-        console.log('D')
         dispatch({type: 'ADD_POST', posts: data['data']})})
   }
-  console.log('E')
+}
+
+export function dispatchFunctionUser(object, updateUsers) {
+  return function (dispatch) {
+    return fetch('api/users', {
+        method: "POST",
+        body: JSON.stringify(object),
+        headers: {'Content-Type': 'application/json'}
+    })
+    .then(response => response.json())
+    .then(data => updateUsers())
+  }
 }

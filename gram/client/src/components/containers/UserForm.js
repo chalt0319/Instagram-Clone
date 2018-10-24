@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { dispatchFunctionUser } from './dispatch'
 
 class UserForm extends Component {
 
@@ -30,13 +32,14 @@ class UserForm extends Component {
     }
 
     e.preventDefault()
-    fetch('api/users', {
-        method: "POST",
-        body: JSON.stringify(info),
-        headers: {'Content-Type': 'application/json'}
-    })
-    .then(response => response.json())
-    .then(data => this.props.updateUsers())
+    this.props.dispatchFunctionUser(info, this.props.updateUsers)
+    // fetch('api/users', {
+    //     method: "POST",
+    //     body: JSON.stringify(info),
+    //     headers: {'Content-Type': 'application/json'}
+    // })
+    // .then(response => response.json())
+    // .then(data => this.props.updateUsers())
     this.setState({
       name: "",
       pic_url: ""
@@ -55,4 +58,10 @@ class UserForm extends Component {
   }
 }
 
-export default UserForm
+const mapDispatchToProps = dispatch => {
+  return {
+    dispatchFunctionUser: (object, fun) => dispatch(dispatchFunctionUser(object, fun))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(UserForm)
