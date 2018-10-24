@@ -10,10 +10,14 @@ export default function postReducer(state = {posts: [], likes: [], comments: [],
 
     case 'LIKE_POST':
 
+      const filteredLikes = state.likes.filter(function (post) {
+        return post.id !== action.post.id
+      })
+
       if (!state.likes.includes(action.post)) {
         return {...state, likes: state.likes.concat(action.post)}
       } else {
-        return {...state}
+        return {...state, likes: filteredLikes}
       }
 
     case 'ADD_COMMENT':
