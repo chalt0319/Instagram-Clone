@@ -33,13 +33,6 @@ class UserForm extends Component {
 
     e.preventDefault()
     this.props.dispatchFunctionUser(info, this.props.updateUsers)
-    // fetch('api/users', {
-    //     method: "POST",
-    //     body: JSON.stringify(info),
-    //     headers: {'Content-Type': 'application/json'}
-    // })
-    // .then(response => response.json())
-    // .then(data => this.props.updateUsers())
     this.setState({
       name: "",
       pic_url: ""
