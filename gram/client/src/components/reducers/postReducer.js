@@ -6,7 +6,6 @@ export default function postReducer(state = {posts: [], likes: [], comments: [],
   switch (action.type) {
     case 'ADD_POST':
 
-      console.log(action.posts)
       return {...state, posts: action.posts}
 
     case 'LIKE_POST':

@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import postReducer from './components/reducers/postReducer'
 import LikesContainer from './components/containers/LikesContainer'
 import CommentContainer from './components/containers/CommentContainer'
+import UsersContainer from './components/containers/UsersContainer'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const store = createStore(postReducer);
@@ -19,6 +20,7 @@ ReactDOM.render((
          <Route exact path="/" component={App} />
          <Route exact path="/likes" component={LikesContainer} />
          <Route exact path="/comments" component={CommentContainer} />
+         <Route exact path="/users" component={UsersContainer} />
       </React.Fragment>
     </Router>
  </Provider>),
