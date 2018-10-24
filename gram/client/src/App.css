@@ -204,3 +204,13 @@ body {
   max-height: 70px;
   min-height: 70px;
 }
+
+.user-form {
+  margin: 10px auto;
+  width: 400px;
+  /* border: 0px solid white;
+  border-radius: 10px; */
+  display: block;
+  max-height: 70px;
+  min-height: 70px;
+}

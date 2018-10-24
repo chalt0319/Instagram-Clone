@@ -14,6 +14,13 @@ class UsersContainer extends Component {
       .then(response => response.json())
       .then(data => {this.setState({users: data})})
   }
+
+  componentDidUpdate() {
+    fetch('api/users')
+      .then(response => response.json())
+      .then(data => {this.setState({users: data})})
+  }
+
   render() {
 
     return (
