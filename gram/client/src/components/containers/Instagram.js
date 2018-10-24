@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SearchInput from './SearchInput'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
+import { dispatchFunction } from './dispatch'
 
 class Instagram extends Component {
 
@@ -10,15 +11,14 @@ class Instagram extends Component {
   }
 
   componentDidMount() {
-    fetch('http://api.giphy.com/v1/gifs/search?q=funny&api_key=dc6zaTOxFJmzC&rating=g')
-      .then(response => response.json())
-      .then(data => {this.props.dispatch({type: 'ADD_POST', posts: data['data']})})
+      console.log('A')
+      this.props.dispatchFunction("funny")
+      console.log('B')
   }
 
   searchBar = (word) => {
-    fetch('http://api.giphy.com/v1/gifs/search?q=' + word + '&api_key=dc6zaTOxFJmzC&rating=g')
-      .then(response => response.json())
-      .then(data => {this.props.dispatch({type: 'ADD_POST', posts: data['data']})})
+    console.log(word)
+    this.props.dispatchFunction(word)
   }
 
   scrollUp = () => {
@@ -49,4 +49,10 @@ class Instagram extends Component {
   }
 }
 
-export default connect()(Instagram)
+const mapDispatchToProps = dispatch => {
+  return {
+    dispatchFunction: (word) => dispatch(dispatchFunction(word))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Instagram)

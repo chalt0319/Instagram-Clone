@@ -3,15 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import postReducer from './components/reducers/postReducer'
 import LikesContainer from './components/containers/LikesContainer'
 import CommentContainer from './components/containers/CommentContainer'
 import UsersContainer from './components/containers/UsersContainer'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
-const store = createStore(postReducer);
+const store = createStore(postReducer, applyMiddleware(thunk));
 
 ReactDOM.render((
   <Provider store={store}>
