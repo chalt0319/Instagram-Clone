@@ -14,7 +14,7 @@ export default class Comments extends Component {
     return (
       <div>
         <h2 id='commented-header'>Commented Posts:</h2>
-        <div className="image-feed">
+        <div >
           {this.showPosts()}
         </div>
       </div>

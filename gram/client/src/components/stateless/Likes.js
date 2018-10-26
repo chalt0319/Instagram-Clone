@@ -14,7 +14,7 @@ export default class Likes extends Component {
     return (
       <div>
         <h2 id='likes-header'>Liked Posts:</h2>
-        <div className="image-feed">
+        <div >
           {this.showLikes()}
         </div>
       </div>

@@ -15,7 +15,6 @@ class Instagram extends Component {
   }
 
   searchBar = (word) => {
-    console.log(word)
     this.props.dispatchFunction(word)
   }
 

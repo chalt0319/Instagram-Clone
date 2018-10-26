@@ -12,7 +12,7 @@ export default class Posts extends Component {
   render() {
 
     return (
-      <div className="image-feed">
+      <div >
         {this.showPosts()}
       </div>
     );
