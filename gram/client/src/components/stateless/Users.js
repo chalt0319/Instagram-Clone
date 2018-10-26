@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import User from './User'
 import UserForm from '../containers/UserForm'
 
-export default class Posts extends Component {
+export default class Users extends Component {
 
   showUsers = () => {
     return this.props.users.map(function (user) {
@@ -15,7 +15,7 @@ export default class Posts extends Component {
     return (
       <div >
         <h2 id='commented-header'>All Users:</h2>
-        <UserForm updateUsers={this.props.updateUsers}/>
+        <UserForm updateUsers={this.props.updateUsers} />
         {this.showUsers()}
       </div>
     );

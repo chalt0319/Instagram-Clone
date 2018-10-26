@@ -29,6 +29,7 @@ class UsersContainer extends Component {
           <Instagram />
         </header>
         <Users users={this.state.users} updateUsers={this.updateUsers}/>
+
       </div>
     );
   }

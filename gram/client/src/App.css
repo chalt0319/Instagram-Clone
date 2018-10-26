@@ -187,11 +187,12 @@ body {
 }
 
 .username {
-  display: inline;
+  /* display: inline; */
   font-family: Optima;
   font-size: 18px;
   position: relative;
-  top: -30px;
+  top: -70px;
+  left: 90px;
   padding-left: 10px;
 }
 
@@ -214,4 +215,21 @@ body {
   display: block;
   max-height: 30px;
   min-height: 30px;
+}
+
+.user-thumbsup {
+  position: relative;
+  bottom: 27px;
+  right: -260px;
+  max-width: 20px;
+  min-height: 20px;
+  z-index: 4;
+}
+
+.user-likes {
+  position: relative;
+  bottom: 48px;
+  right: -360px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
