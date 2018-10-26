@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 
 export function dispatchFunction(word) {
   return function (dispatch) {
