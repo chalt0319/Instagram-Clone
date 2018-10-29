@@ -5,6 +5,7 @@ export function dispatchFunction(word) {
       .then(response => response.json())
       .then(data => {
         dispatch({type: 'ADD_POST', posts: data['data']})})
+        .catch(error => console.log(error))
   }
 }
 

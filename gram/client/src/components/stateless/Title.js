@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-const Title = (props) => (
+const Title = ({title}) => (
   <div className="title">
-  {props.title}
+  {title}
   </div>
 )
 
