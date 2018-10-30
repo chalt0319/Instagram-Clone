@@ -40,14 +40,13 @@
 }
 
 .post-image {
-  max-width: 400px;
-  min-width: 400px;
+  width: 500px;
 }
 
 .heart {
   position: relative;
   top: 7px;
-  max-width: 20px;
+  max-width: 23px;
   padding-left: 6px;
   padding-right: 5px;
 }
@@ -92,23 +91,23 @@
 #heart {
   position: fixed;
   left: 5%;
-  top: 3%;
-  max-width: 20px;
+  top: 2.5%;
+  max-width: 23px;
 }
 
 #home {
   position: fixed;
   left: 2%;
-  top: 3%;
-  max-width: 20px;
+  top: 2.5%;
+  max-width: 23px;
 }
 
 #comment {
   position: fixed;
   left: 8%;
-  top: 3%;
-  max-width: 20px;
-  min-height: 20px;
+  top: 2.5%;
+  max-width: 23px;
+  min-height: 23px;
 }
 
 #user {
@@ -160,7 +159,7 @@ body {
 .image-box {
   background: white;
   margin: 10px auto;
-  width: 400px;
+  width: 500px;
   border: 0px solid white;
   border-radius: 10px;
   display: block;
