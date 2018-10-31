@@ -9,6 +9,9 @@
 
 .App-header {
   background-color: #282c34;
+  position: fixed;
+  width: 100%;
+  margin-top: -2%;
   /* min-height: 100vh; */
   padding: 15px;
   /* display: flex; */
@@ -17,6 +20,7 @@
   /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
+  z-index: 5;
 }
 
 .App-link {
@@ -91,31 +95,35 @@
 #heart {
   position: absolute;
   left: 5%;
-  top: 2.5%;
+  top: 4.5%;
   max-width: 23px;
+  margin-top: 1.3%;
 }
 
 #home {
   position: absolute;
   left: 2%;
-  top: 2.5%;
+  top: 4.5%;
   max-width: 23px;
+  margin-top: 1.3%;
 }
 
 #comment {
   position: absolute;
   left: 8%;
-  top: 2.5%;
+  top: 4.5%;
   max-width: 23px;
   min-height: 23px;
+  margin-top: 1.3%;
 }
 
 #user {
   position: absolute;
-  right: 2%;
+  right: 4%;
   top: 2%;
   max-width: 30px;
   min-height: 30px;
+  margin-top: 1%;
 }
 
 @keyframes slidein
