@@ -14,7 +14,7 @@ export default class Users extends Component {
 
     return (
       <div >
-        <h2 id='commented-header'>All Users:</h2>
+        <h2 id='users-header'>All Users:</h2>
         <UserForm updateUsers={this.props.updateUsers} />
         {this.showUsers()}
       </div>

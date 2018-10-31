@@ -147,16 +147,25 @@
 #likes-header {
   color: white;
   text-align: center;
+  padding-top: 40px;
 }
 
 #commented-header {
   color: white;
   text-align: center;
+  padding-top: 40px;
 }
 
 #posts-header {
   color: white;
   text-align: center;
+  padding-top: 40px;
+}
+
+#users-header {
+  color: white;
+  text-align: center;
+  padding-top: 40px;
 }
 
 body {
@@ -239,4 +248,12 @@ body {
   right: -410px;
   padding-left: 2px;
   padding-right: 2px;
+}
+
+h2 {
+
+}
+
+.Instagram-bar {
+  margin-bottom: 50px;
 }
