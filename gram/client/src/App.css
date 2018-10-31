@@ -89,21 +89,21 @@
 }
 
 #heart {
-  position: fixed;
+  position: absolute;
   left: 5%;
   top: 2.5%;
   max-width: 23px;
 }
 
 #home {
-  position: fixed;
+  position: absolute;
   left: 2%;
   top: 2.5%;
   max-width: 23px;
 }
 
 #comment {
-  position: fixed;
+  position: absolute;
   left: 8%;
   top: 2.5%;
   max-width: 23px;
@@ -111,7 +111,7 @@
 }
 
 #user {
-  position: fixed;
+  position: absolute;
   right: 2%;
   top: 2%;
   max-width: 30px;
