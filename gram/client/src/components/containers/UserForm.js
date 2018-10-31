@@ -44,7 +44,7 @@ class UserForm extends Component {
     return (
       <form onSubmit={this.handleSubmit} className="user-form">
         <input onChange={this.handleUsername} type="text" value={this.state.name}  placeholder="Username"></input><span> </span>
-        <input onChange={this.handleURL} type="text" value={this.state.pic_url}  size="33" placeholder="Image URL"></input><span> </span>
+        <input onChange={this.handleURL} type="text" value={this.state.pic_url}  size="36" placeholder="Image URL"></input><span> </span>
         <input type='submit' value="Create User"></input>
       </form>
     );
